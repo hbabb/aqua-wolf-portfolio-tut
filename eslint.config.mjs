@@ -11,16 +11,13 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-
-  ...compat.extends("prettier"),
-
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
     plugins: {
       tailwindcss,
     },
     rules: {
-      "tailwindcss/classnames-order": "error",
+      "tailwindcss/classnames-order": "off",
       "tailwindcss/no-custom-classname": "off",
       "tailwindcss/no-contradicting-classname": "warn",
     },

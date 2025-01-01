@@ -20,5 +20,5 @@
     "**/components/**/index.tsx": "${dirname} - Component"
   },
   "json.schemaDownload.enable": false,
-  "cSpell.words": ["biomejs", "commitlint", "nextui", "tabler"]
+  "cSpell.words": ["biomejs", "commitlint", "logomark", "nextui", "tabler"]
 }
