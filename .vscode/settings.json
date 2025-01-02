@@ -20,5 +20,18 @@
     "**/components/**/index.tsx": "${dirname} - Component"
   },
   "json.schemaDownload.enable": false,
-  "cSpell.words": ["biomejs", "commitlint", "logomark", "nextui", "tabler", "vercel"]
+  "cSpell.words": [
+    "biomejs",
+    "commitlint",
+    "handwritting",
+    "logomark",
+    "monalisa",
+    "monolisa",
+    "nextui",
+    "rehype",
+    "rgba",
+    "slugified",
+    "tabler",
+    "vercel"
+  ]
 }

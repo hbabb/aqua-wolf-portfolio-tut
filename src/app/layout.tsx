@@ -1,15 +1,23 @@
+import { cn } from "@/lib/utils";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { La_Belle_Aurore as FontHandwritting, Inter as FontSans } from "next/font/google";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fontSans = FontSans({
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontHandwritting = FontHandwritting({
+  weight: ["400"],
   subsets: ["latin"],
+  variable: "--font-handwritting",
+});
+
+const MonaLisa = localFont({
+  src: "@/assets/fonts/MonoLisa-regular.ttf",
+  variable: "--font-monalisa",
 });
 
 export const metadata: Metadata = {
@@ -23,8 +31,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen bg-bg-default font-sans antialiased",
+          fontSans.variable,
+          fontHandwritting.variable,
+          MonaLisa.variable,
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
